@@ -35,12 +35,6 @@
                                             echo 'class="link-dark"';
                                         } ?>><i class="bi bi-upload pr-2"></i>Upload Video</a></li>
 
-        <li><a href="about.php" <?php if ($active_page === 'about') {
-                                    echo
-                                    'class="active"';
-                                } else {
-                                    echo 'class="link-dark"';
-                                }  ?>><i class="bi bi-person-circle"></i> About Us</a></li>
-
+     
     </ul>
 </div>
