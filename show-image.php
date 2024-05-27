@@ -27,8 +27,10 @@ require_once './api/dbcon.php';
         while ($image = mysqli_fetch_assoc($query_result)) {
         $images = 'uploads/images/'.$image['pre_name'];
     ?>
-
-        <img src="<?php echo $images ?>" alt="" style="width: 500px;height: 500px;object-fit: cover;">
+        <div class="img-zoom-container" style="display: flex;">
+        <img id="myimage" src="<?php echo $images ?>" width="300" height="320" alt="Girl">
+        <div id="myresult" class="img-zoom-result"></div>
+    </div>
          
     <?php
         }
