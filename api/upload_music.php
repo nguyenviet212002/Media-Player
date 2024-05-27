@@ -21,7 +21,7 @@ if (isset($_POST['upload_music'])) {
 
     // Analyze the audio file
     $fileInfo = $getID3->analyze($_FILES['file']['tmp_name']);
-
+    
     if (move_uploaded_file($_FILES['file']['tmp_name'], $targetFile)) {
         $pre_name = $_FILES['file']['name'];
         $status = 1;

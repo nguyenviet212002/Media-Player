@@ -17,12 +17,12 @@ require_once './api/dbcon.php';
 <div class="part-2">
 
     <h2>Videos</h2>
-    <table>
+    <table border="1">
         <thead style="height:15mm;">
             <tr>
-                <th>Action</th>
-                <th>Video</th>
-                <th>Duration</th>
+                <th style="padding: 15px;">Action</th>
+                <th style="padding: 15px;">Video</th>
+                <th style="padding: 15px;">Duration</th>
             </tr>
         </thead>
         <tbody>
@@ -38,7 +38,7 @@ require_once './api/dbcon.php';
                     $id = "icon" . $video['vid'];
             ?>
 
-                    <tr style="height:15mm;">
+                    <tr style="padding: 15px;">
                         <td style="text-align: center; line-height:28px;">
                             <?php
                             $data = $video['vid'];
@@ -50,9 +50,9 @@ require_once './api/dbcon.php';
 
                             ?>
                         </td>
-                        <td><?= htmlspecialchars($video['pre_name']) ?></td>
+                        <td style="padding: 15px;"> <?= htmlspecialchars($video['pre_name']) ?></td>
 
-                        <td>
+                        <td style="padding: 15px;">
                             <?php
                             echo $video['duration'];
                             ?>

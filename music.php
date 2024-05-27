@@ -16,12 +16,12 @@ require_once './api/dbcon.php';
 
 <div class="part-2">
     <h2>Audios</h2>
-    <table class="song-table">
+    <table class="song-table" border="1">
         <thead style="height:15mm;">
             <tr>
-                <th style="width:10mm; ">Action</th>
-                <th>Audio</th>
-                <th>Duration</th>
+                <th style="padding: 15px;" >Action</th>
+                <th style="padding: 15px;">Audio</th>
+                <th style="padding: 15px;">Duration</th>
             </tr>
         </thead>
         <tbody>
@@ -38,12 +38,12 @@ require_once './api/dbcon.php';
             ?>
 
                     <tr style="height:15mm;">
-                        <td>
+                        <td style="padding: 15px;">
                             <i id="<?= $id ?>" onclick="playAudio('<?= $id ?>', '<?= $source ?>')" style="font-size: 28px; cursor:pointer;" class="bi bi-play-circle"></i>
                         </td>
-                        <td><?= htmlspecialchars($music['pre_name']) ?></td>
+                        <td style="padding: 15px;"><?= htmlspecialchars($music['pre_name']) ?></td>
 
-                        <td>
+                        <td style="padding: 15px;">
                             <?php
                             echo $music['duration'];
                             ?>

@@ -4,6 +4,7 @@ require_once 'dbcon.php';
 require_once '../Library/getid3/getid3.php';
 
 if (isset($_POST['upload_video'])) {
+    
     $targetDirectory = "../uploads/videos/";
     $uploadedFile = $_FILES['file']['name'];
     $targetFile = $targetDirectory . basename($uploadedFile);

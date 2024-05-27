@@ -20,6 +20,12 @@
                                 } else {
                                     echo 'class="link-dark"';
                                 } ?>><i class="bi bi-camera-video pr-2"></i>Video Library</a></li>
+        <li><a href="image.php" <?php if ($active_page === 'image') {
+                                    echo
+                                    'class="active"';
+                                } else {
+                                    echo 'class="link-dark"';
+                                } ?>><i class="bi bi-image pr-2"></i>Image Library</a></li>
 
         <li><a href="upload.php" <?php if ($active_page === 'upload') {
                                         echo
@@ -34,6 +40,12 @@
                                         } else {
                                             echo 'class="link-dark"';
                                         } ?>><i class="bi bi-upload pr-2"></i>Upload Video</a></li>
+        <li><a href="upload-image.php" <?php if ($active_page === 'upload-image') {
+                                            echo
+                                            'class="active"';
+                                        } else {
+                                            echo 'class="link-dark"';
+                                        } ?>><i class="bi bi-upload pr-2"></i>Upload Image</a></li>
 
      
     </ul>

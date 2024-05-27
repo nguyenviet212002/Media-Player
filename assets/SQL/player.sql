@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2024 at 05:46 AM
+-- Generation Time: May 27, 2024 at 08:29 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `player`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `image`
+--
+
+CREATE TABLE `image` (
+  `id` int(11) NOT NULL,
+  `image_name` varchar(255) NOT NULL,
+  `pre_name` varchar(255) NOT NULL,
+  `status` int(2) NOT NULL,
+  `created_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `image`
+--
+
+INSERT INTO `image` (`id`, `image_name`, `pre_name`, `status`, `created_at`) VALUES
+(5, 'Ghế gamming', 'ghe-gaming-e-dra-egc207-tim---trang-5fafa67b482e3.jpg', 1, '2024-05-27'),
+(6, 'ảnh trắng', 'nền-trắng-full.jpg', 1, '2024-05-27');
 
 -- --------------------------------------------------------
 
@@ -41,7 +63,8 @@ CREATE TABLE `music` (
 --
 
 INSERT INTO `music` (`mid`, `music_name`, `pre_name`, `duration`, `status`, `created_at`) VALUES
-(46, 'Thuyền không đợi bến', 'ThuyenKhongBenDoi-TrunggIUVietNamCZEE-13594281.mp3', '00:05:35', 1, '2024-05-26 22:34:01');
+(46, 'Thuyền không đợi bến', 'ThuyenKhongBenDoi-TrunggIUVietNamCZEE-13594281.mp3', '00:05:35', 1, '2024-05-26 22:34:01'),
+(47, 'Từng là', 'TungLa-VuCatTuong-13962415.mp3', '00:04:12', 1, '2024-05-26 23:06:31');
 
 -- --------------------------------------------------------
 
@@ -70,6 +93,12 @@ INSERT INTO `video` (`vid`, `video_name`, `pre_name`, `duration`, `status`, `cre
 --
 
 --
+-- Indexes for table `image`
+--
+ALTER TABLE `image`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `music`
 --
 ALTER TABLE `music`
@@ -86,10 +115,16 @@ ALTER TABLE `video`
 --
 
 --
+-- AUTO_INCREMENT for table `image`
+--
+ALTER TABLE `image`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `music`
 --
 ALTER TABLE `music`
-  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `video`
