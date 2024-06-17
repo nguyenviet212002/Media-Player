@@ -23,6 +23,8 @@ require_once './api/dbcon.php';
                 <th style="padding: 15px;">Action</th>
                 <th style="padding: 15px;">Video</th>
                 <th style="padding: 15px;">Duration</th>
+                <th style="padding: 15px;">Edit</th>
+                <th style="padding: 15px;">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -50,13 +52,15 @@ require_once './api/dbcon.php';
 
                             ?>
                         </td>
-                        <td style="padding: 15px;"> <?= htmlspecialchars($video['pre_name']) ?></td>
+                        <td style="padding: 15px;"> <?= htmlspecialchars($video['video_name']) ?></td>
 
                         <td style="padding: 15px;">
                             <?php
                             echo $video['duration'];
                             ?>
                         </td>
+                        <td style="padding: 15px;"  ><a href="edit-video.php?id=<?php echo $video['vid'];?>"> Edit</a> </td>
+                        <td style="padding: 15px;" onclick="deletes()" > <a href="./api/delete_video.php?id=<?php echo $video['vid'];?>" >Delete</a></td>
                 <?php
                 }
             }
@@ -67,6 +71,11 @@ require_once './api/dbcon.php';
 
     </table>
 </div>
+<script>
+    function deletes(){
+          alert('Bạn có muốn xóa không ?')
+    }
+</script>
 <?php
 
 include('footer.php');

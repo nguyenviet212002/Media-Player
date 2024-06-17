@@ -35,7 +35,7 @@ include('header.php');
 
 
             <div class="control-form">
-                <label>Upload Music</label>
+                <label>Upload Video</label>
                 <input type="file" accept="video/mp4, video/webm" id="f" name="file">
             </div>
 

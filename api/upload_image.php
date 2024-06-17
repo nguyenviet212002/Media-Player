@@ -32,6 +32,6 @@ if (isset($_POST['upload_image'])) {
     }
 
     // Redirect to the current page to display the message
-    // header("Location: ../upload-image.php");
+    header("Location: ../upload-image.php");
     exit;
 }

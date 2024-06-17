@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "js-image-zoom": "^0.7.0",
+    "zoomist": "^2.0.12"
+  }
+}

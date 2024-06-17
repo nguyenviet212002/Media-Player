@@ -13,7 +13,6 @@ if (isset($_POST['upload_video'])) {
 
     // Analyze the video file
     $fileInfo = $getID3->analyze($_FILES['file']['tmp_name']);
-
     if (move_uploaded_file($_FILES['file']['tmp_name'], $targetFile)) {
         $pre_name = $_FILES['file']['name'];
         $status = 1;
@@ -29,7 +28,7 @@ if (isset($_POST['upload_video'])) {
 
         $sql_query = "INSERT INTO video (video_name, pre_name, status, duration, created_at) VALUES ('$video_name', '$pre_name', '$status', '$duration', '$created_at')";
         $conn->query($sql_query);
-
+        
         $_SESSION['Video_Upload'] = "File uploaded successfully.";
     } else {
         $_SESSION['Video_Upload'] = "Error uploading the file.";

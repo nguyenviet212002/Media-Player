@@ -22,6 +22,9 @@ require_once './api/dbcon.php';
                 <th style="padding: 15px;" >Action</th>
                 <th style="padding: 15px;">Audio</th>
                 <th style="padding: 15px;">Duration</th>
+                <th style="padding: 15px;">Edit</th>
+                <th style="padding: 15px;">Delete</th>
+
             </tr>
         </thead>
         <tbody>
@@ -36,18 +39,19 @@ require_once './api/dbcon.php';
                     $source = 'uploads/audios/' . $music['pre_name'];
                     $id = "icon" . $music['mid'];
             ?>
-
                     <tr style="height:15mm;">
                         <td style="padding: 15px;">
                             <i id="<?= $id ?>" onclick="playAudio('<?= $id ?>', '<?= $source ?>')" style="font-size: 28px; cursor:pointer;" class="bi bi-play-circle"></i>
                         </td>
-                        <td style="padding: 15px;"><?= htmlspecialchars($music['pre_name']) ?></td>
+                        <td style="padding: 15px;"><?= htmlspecialchars($music['music_name']) ?></td>
 
                         <td style="padding: 15px;">
                             <?php
                             echo $music['duration'];
                             ?>
                         </td>
+                        <td style="padding: 15px;"  ><a href="edit-music.php?id=<?php echo $music['mid'];?>"> Edit</a> </td>
+                        <td style="padding: 15px;" onclick="deletes()" > <a href="./api/delete_music.php?id=<?php echo $music['mid'];?>" >Delete</a></td>
                 <?php
                 }
             } ?>
@@ -76,7 +80,11 @@ require_once './api/dbcon.php';
         </div>
     </div>
 </div>
-
+<script>
+    function deletes(){
+          alert('Bạn có muốn xóa không ?')
+    }
+</script>
 <?php
 
 include('footer.php');

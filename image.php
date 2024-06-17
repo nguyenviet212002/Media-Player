@@ -3,6 +3,31 @@ include('header.php');
 require_once './api/dbcon.php';
 
 ?>
+<style>
+    div.gallery {
+
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 350px;
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.desc {
+        color: black;
+        background-color: white;
+        padding: 15px;
+        text-align: center;
+    }
+</style>
 <div class="part-1">
 
     <?php
@@ -15,15 +40,8 @@ require_once './api/dbcon.php';
 </div>
 
 <div class="part-2">
-    <h2>Audios</h2>
-    <table class="song-table" border="1">
-        <thead style="height:15mm;">
-            <tr>
-                <th style="padding: 15px;">Name image</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
+    <h2>Images</h2>
+
             <?php
             $query = "SELECT * FROM image ORDER BY created_at";
             $stmt = mysqli_prepare($conn, $query);
@@ -32,22 +50,20 @@ require_once './api/dbcon.php';
 
             if (mysqli_num_rows($query_result) > 0) {
                 while ($image = mysqli_fetch_assoc($query_result)) {
+                    $images = 'uploads/images/' .  $image['pre_name']
                    
             ?>
-
-                    <tr style="height:15mm;">
-                    
-                        <td><?= htmlspecialchars($image['image_name']) ?></td>
-
-                        <td>
-                            <a href="show-image.php?id=<?php echo $image['id'];?>">xem hình ảnh</a>
-                        </td>
+                <div class="gallery">
+                    <a href="show-image.php?id=<?php echo $image['id'];?>" target="_blank" >
+                        <img src="<?php echo $images ?>" alt="Cinque Terre" style="width: 350px;height: 200px;">
+                    </a>
+                    <div class="desc"><?php echo $image['image_name']?></div>
+                </div>
+                  
                 <?php
                 }
             } ?>
-                    </tr>
-        </tbody>
-    </table>
+
 </div>
 
 

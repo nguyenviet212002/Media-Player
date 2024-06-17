@@ -34,7 +34,7 @@ require_once './api/dbcon.php';
         ?>
                 <div class="m-part">
                     <i class="bi bi-music-note-beamed"></i>
-                    <div><?= $music['pre_name'] ?></div>
+                    <div><?= $music['music_name'] ?></div>
                 </div>
 
         <?php
@@ -68,7 +68,7 @@ require_once './api/dbcon.php';
         ?>
                 <div class="v-part">
                     <i class="bi bi-camera-reels"></i>
-                    <div><?= $video['pre_name'] ?></div>
+                    <div><?= $video['video_name'] ?></div>
 
                 </div>
 

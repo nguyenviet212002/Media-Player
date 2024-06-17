@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Styling WebVTT cues</title>
+    <style>
+        video::cue {
+            background-image: linear-gradient(to bottom, dimgray, lightgray);
+            color: papayawhip;
+        }
+        
+        video::cue(b) {
+            color: peachpuff;
+        }
+    </style>
+</head>
+
+<body>
+    <video controls autoplay src="./uploads/videos/5446169629359.mp4">
+   <track default src="track.vtt">
+  </video>
+</body>
+
+</html>

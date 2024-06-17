@@ -51,5 +51,10 @@ $created_at = $row['created_at'];
 </head>
 
 <div class="ground">
-    <video id="myVideo" src="<?php echo 'uploads/videos/' . $pre_name ?>" controls></video>
+    <video id="myVideo" src="<?php echo 'uploads/videos/' . $pre_name ?>" controls>
+        <track default src="sub.vtt">
+        </track>
+    </video>
+
+
 </div>

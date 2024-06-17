@@ -39,7 +39,7 @@ include('header.php');
 
             <div class="control-form">
                 <label class="form-label">Upload Image</label>
-                <input type="file" accept="image/png, image/gif, image/jpeg" class="form-control" id="f" name="file">
+                <input type="file" accept="image/png, image/gif, image/ ,image/h" class="form-control" id="f" name="file">
             </div>
 
             <div class="control-form">
