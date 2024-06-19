@@ -51,6 +51,7 @@ include('header.php');
                     <div class="control-form">
                         <input name="upload_video" type="submit" />
                     </div>
+                    <h2 onclick="deletes()" ><a href="./api/delete_video.php?id=<?php echo $video['vid'];?>" >Delete</a></h2>
 
             </form> <?php
                 }
